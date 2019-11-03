@@ -26,12 +26,12 @@
                 <form method="post" action="<?php echo base_url(); ?>login/validation">
                     <div class="form-group">
                         <label>Enter Email Address</label>
-                        <input type="text" name="user_email" class="form-control" value="<?php echo set_value('user_email'); ?>" />
+                        <input type="text" name="user_email" class="form-control" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" title="Email should @ and domain name" value="<?php echo set_value('user_email'); ?>" />
                         <span class="text-danger"><?php echo form_error('user_email'); ?></span>
                     </div>
                     <div class="form-group">
                         <label>Enter Password</label>
-                        <input type="password" name="user_password" class="form-control" value="<?php echo set_value('user_password'); ?>" />
+                        <input type="password" name="user_password" class="form-control" required value="<?php echo set_value('user_password'); ?>" />
                         <span class="text-danger"><?php echo form_error('user_password'); ?></span>
                     </div>
                     <div class="form-group">
